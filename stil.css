@@ -1,0 +1,5 @@
+.a{
+    background: linear-gradient(45deg,#323232,red,grey);
+    background-size: 400% 400%;
+    animation: animate 3s infinite alternate;
+}
