@@ -25,6 +25,13 @@
             background-size: 400% 400%;
             animation: animate 3s infinite alternate;
         }
+        .paymentlink 
+        {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            text-align: left;
+        }
 
 
         
@@ -55,18 +62,32 @@
                     <h2 class="h">Air Force 1</h2>       
                     <div id="btn" class="float-end container-sm btn-group-vertical btn-group-sm"> 
                         <div class="btn-group-vertical liveAlertPlaceholder" role="group" aria-label="Vertical button group" id="liveAlertPlaceholder">
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn">40</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn1">41</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn2">42</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn3">42.5</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn4">43.5</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn5">44</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn6">44.5</button>
-                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn7">45</button>  
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn" onclick="selectSize('40')">40</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn1"onclick="selectSize('41')">41</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn2"onclick="selectSize('42')">42</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn3"onclick="selectSize('42.5')">42.5</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn4"onclick="selectSize('43.5')">43.5</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn5"onclick="selectSize('44')">44</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn6"onclick="selectSize('44.5')">44.5</button>
+                            <button type="button" class="btn btn-outline-light text-dark" id="liveAlertBtn7"onclick="selectSize('45')">45</button>  
                             <button id="spt" class="btn btn-outline-light text-dark" type="submit"></button>
-                            <a class="btn btn-outline-light text-dark" href="odeme.html" role="button">
-                                <i class="bi bi-cart"></i> Sepete Git
-                            </a>
+                            <button class="btn btn-outline-light text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"  aria-controls="offcanvasBottom" onclick="addToCart()">Sepete Ekle</button>
+                            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                              <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Sepetiniz</h5>
+                                <a href="odeme.html" id="paymentLink" class="btn btn-outline-light text-dark">Ödeme Yap</a>
+
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                </button>
+                               
+                              </div>
+                              <div id="spt" class="offcanvas-body small"> 
+                                
+                                
+                                
+                              </div>
+                            </div>
+                            
                         </div>
                         <p class="h6">
                             Hız kazandıran orijinal basketbol ayakkabısıyla kolayca harekete geçebilirsin. AF1'in bu modelinde sunulan Nike EasyOn teknolojisi sayesinde stili ellerini kullanmadan giyip çıkarabilirsin. Ayakkabının esnek topuğu, ayağının altında katlanıp eski şeklini geri kazanarak ayakkabıyı giyip çıkarmayı kolaylaştırır. Derinin sadeliği ve şıklığı ise bu stile üstün giyilebilirlik kazandırır. Sevdiğin her özelliği ve fazlasını sunuyoruz.
@@ -76,7 +97,17 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+
+        
+
+
+        
+        
+
+
+        
 
 
        
@@ -109,6 +140,24 @@
                 });
             });
 
+
+            var selectedSize = "";
+
+        // Numara seçildiğinde bu işlev çalışacak
+        function selectSize(size) {
+            selectedSize = size;
+        }
+
+        // Sepete ekle butonuna tıklandığında bu işlev çalışacak
+        function addToCart() {
+    // Seçilen numarayı offcanvas içindeki uygun alana ekliyoruz
+    const offcanvasBody = document.querySelector('.offcanvas-body');
+    offcanvasBody.innerHTML = "Sepetinizdeki Numara: " + selectedSize; 
+
+    // Ödeme bağlantısını etkinleştirme
+    const paymentLink = document.getElementById('paymentLink');
+    paymentLink.setAttribute('href', 'odeme.html'); // Ödeme sayfasının URL'sini belirtin
+}
 
          
 
