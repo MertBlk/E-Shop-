@@ -8,117 +8,101 @@
     <script src="assets/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-      
-        ul{
+        ul {
             display: none;
         }
         .a1 {
             color: white;
         }
         .carousel-inner .carousel-item {
-    transition: transform .2s ease-in-out; /* .6s yerine istediğiniz süreyi saniye cinsinden belirleyebilirsiniz */
-}
+            transition: transform .2s ease-in-out; /* .6s yerine istediğiniz süreyi saniye cinsinden belirleyebilirsiniz */
+        }
 
+        .c1 {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-  
-  <nav class=" navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Metty Nike Satıcısı</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="hk.html"><i class="bi bi-bag-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-            </svg></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle role="button" data-bs-toggle="dropdown" aria-expanded="false">Giyim</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="mont.html">Mont</a></li>
-            </ul>
-        </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ayakkabi
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="tn1.html">Spor Ayakkabı</a></li>
-              <li><a class="dropdown-item" href="af1.html">Günlük Ayakkabı</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Yakında Güncellenicek</a></li>
-            </ul>
-          </li>
-          
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark" type="submit">Ara</button>
-        </form>
-      </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Official Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="hk.html"><i class="bi bi-bag-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+                        </svg></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Giyim</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="mont.html">Mont</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ayakkabi</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tn1.html">Spor Ayakkabı</a></li>
+                            <li><a class="dropdown-item" href="af1.html">Günlük Ayakkabı</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Yakında Güncellenicek</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Ara</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="container-md">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="n.png" class="d-block w-100" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="bina.jpeg" class="d-block w-100" alt="Viaport Mağaza">
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-  <div class=""></div>
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="n.png" class="d-block w-100" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="bina.jpeg" class="d-block w-100" alt="Viaport Mağaza">
-      </div>
-      
+    <div  id="k1"class="row g-0 bg-body-light position-relative">
+        <div class="col-md-2 mb-md-0 p-sm-1">
+            <img src="image.jpg" class="w-100" alt="...">
+        </div>
+        <div class="col-md-3 p-4 ps-sm-0">
+            <h5 class="mt-0">Yeni Koleksiyonumuz!</h5>
+            <p> It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+            <a href="#" class="btn btn-outline-dark text-dark">Koleksiyonnu incele!</a>
+        </div>
+
+        <div id="c1"class="card text-center mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Yeni Sezon Ürünleri</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p><br>
+                <a href="#" class="btn btn-outline-dark text-dark">Ürünleri İncele</a>
+            </div>
+        </div>
     </div>
-  </div>
-
-    </body>
-    </html>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 
     <script>
-      
         $(function() {
             $("#link1").click(function() {
                 $("#a1").toggle(500);
-                
-            })
-    
+            });
+
             $("#link2").click(function() {
                 $("#b1").toggle(500);
-                
-            })
-           
-            
-
-            
-
-
-          
-
-            
-        })
-        
-        
+            });
+        });
     </script>
-    
+</body>
+</html>
